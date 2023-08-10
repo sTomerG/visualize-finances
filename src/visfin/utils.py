@@ -27,9 +27,7 @@ def concatenate_csv_files(
         [pd.read_csv(file, parse_dates=[date_column]) for file in csv_files],
         ignore_index=True,
     )
-    concatenated_df = concatenated_df.rename(
-        columns={"Category name": category_column}
-    )
+    concatenated_df = concatenated_df.rename(columns={"Category name": category_column})
     if concatenated_df[wallet_column].nunique() != len(csv_files):
         logger.warning(
             "Missing "
