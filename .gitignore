@@ -226,5 +226,7 @@ pyrightconfig.json
 .ionide
 
 /tomeryourexportisready
+/data
+set_initial_balances.sh
 
 # End of https://www.toptal.com/developers/gitignore/api/python,macos,visualstudiocode
