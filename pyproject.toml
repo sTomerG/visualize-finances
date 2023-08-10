@@ -27,7 +27,7 @@ version = {attr = "visfin.__version__"}
 [tool.isort]
 profile = "black"
 known_first_party = ["visfin"] 
-known_third_party = ["loguru", "pandas", "pytest", "streamlit"]
+known_third_party = ["loguru", "pandas", "plotly", "pytest", "streamlit"]
 
 
 [tool.black]
