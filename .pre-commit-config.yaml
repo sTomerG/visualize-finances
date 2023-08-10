@@ -31,7 +31,7 @@ repos:
             dist|
             docs"""
 
-        language_version: python3.10
+        language_version: python3.9
 
   # flake8
   - repo: https://github.com/PyCQA/flake8
@@ -48,3 +48,10 @@ repos:
           # check out their meaning here
           # https://flake8.pycqa.org/en/latest/user/error-codes.html
           - "--ignore=E203,E266,W503,F403"
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        entry: python -m pytest
+        language: system
+        pass_filenames: false
