@@ -1,11 +1,10 @@
 import plotly.express as px
 import streamlit as st
 
-from visfin.configs.columns import BALANCE_COLUMN, DATE_COLUMN, WALLET_COLUMN
-from visfin.main import wallets
-
 st.set_page_config(layout="wide")
 
+from visfin.configs.columns import BALANCE_COLUMN, DATE_COLUMN, WALLET_COLUMN
+from visfin.main import wallets
 
 df_balance = wallets.get_balance_over_time()
 
