@@ -1,3 +1,5 @@
+import os
+
 DUO_DEBT_WALLET = "DUO Schuld"
 WBW_SISTER = "WBW (Broertje en Zusjelief)"
 WBW_FRIENDS = "WBW (The Ridiculous Seven)"
@@ -29,24 +31,25 @@ WALLET_MAPPING = {
     ],
 }
 
+
 INITIAL_BALANCES = {
-    DUO_DEBT_WALLET: -25964.87,
-    WBW_SISTER: 354.94,
-    WBW_FRIENDS: -5.73,
-    WBW_DISPUUT: 10.44,
-    CASH_WALLET: 20,
-    ING_WALLET: 14119.12,
-    KOOPZEGEL_WALLET: 265.6,
-    REVOLUT_WALLET: 179.75,
-    ASN_WALLET: 0,
-    FIXED_CHARGES_WALLET: 0,
-    EXPECTED_TAXES_WALLET: -596.02,
-    DEBIT_WALLET: 0,
-    DUO_INVEST_WALLET: 8785,
-    SPLIT_WALLET: 0,
-    INVEST_WALLET: 6038,
-    CRYPTO_WALLET: 1222.85,
-    SAVINGS_WALLET: 0,
+    DUO_DEBT_WALLET: float(os.environ.get("DUO_DEBT_WALLET", 0)),
+    WBW_SISTER: float(os.environ.get("WBW_SISTER", 0)),
+    WBW_FRIENDS: float(os.environ.get("WBW_FRIENDS", 0)),
+    WBW_DISPUUT: float(os.environ.get("WBW_DISPUUT", 0)),
+    CASH_WALLET: float(os.environ.get("CASH_WALLET", 0)),
+    ING_WALLET: float(os.environ.get("ING_WALLET", 0)),
+    KOOPZEGEL_WALLET: float(os.environ.get("KOOPZEGEL_WALLET", 0)),
+    REVOLUT_WALLET: float(os.environ.get("REVOLUT_WALLET", 0)),
+    ASN_WALLET: float(os.environ.get("ASN_WALLET", 0)),
+    FIXED_CHARGES_WALLET: float(os.environ.get("FIXED_CHARGES_WALLET", 0)),
+    EXPECTED_TAXES_WALLET: float(os.environ.get("EXPECTED_TAXES_WALLET", 0)),
+    DEBIT_WALLET: float(os.environ.get("DEBIT_WALLET", 0)),
+    DUO_INVEST_WALLET: float(os.environ.get("DUO_INVEST_WALLET", 0)),
+    SPLIT_WALLET: float(os.environ.get("SPLIT_WALLET", 0)),
+    INVEST_WALLET: float(os.environ.get("INVEST_WALLET", 0)),
+    CRYPTO_WALLET: float(os.environ.get("CRYPTO_WALLET", 0)),
+    SAVINGS_WALLET: float(os.environ.get("SAVINGS_WALLET", 0)),
 }
 
 ALL_WALLETS = set(INITIAL_BALANCES.keys())
