@@ -16,12 +16,10 @@ jobs:
           python-version: 3.9 # Specify the desired Python version
 
       - name: Install dependencies
-        run: pip ".[dev]"
+        run: pip install ".[dev]"
         
       - name: Install pre-commit
-        run: |
-          pip install pre-commit
-          pre-commit install
+        run: pre-commit install
 
       - name: Run pre-commit hooks
         run: pre-commit run --all-files --show-diff-on-failure
