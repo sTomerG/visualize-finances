@@ -15,6 +15,9 @@ jobs:
         with:
           python-version: 3.9 # Specify the desired Python version
 
+      - name: Install pytest
+        run: pip install pytest
+        
       - name: Install pre-commit
         run: |
           pip install pre-commit

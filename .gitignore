@@ -226,5 +226,6 @@ pyrightconfig.json
 .ionide
 
 /tomeryourexportisready
+/data
 
 # End of https://www.toptal.com/developers/gitignore/api/python,macos,visualstudiocode
