@@ -1,0 +1,24 @@
+name: Pre-commit checks
+
+on: [pull_request] # You can customize the triggers (e.g., push, pull_request, etc.)
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9 # Specify the desired Python version
+
+      - name: Install pre-commit
+        run: |
+          pip install pre-commit
+          pre-commit install
+
+      - name: Run pre-commit hooks
+        run: pre-commit run --all-files --show-diff-on-failure
